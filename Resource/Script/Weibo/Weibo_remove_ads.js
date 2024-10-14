@@ -409,10 +409,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             newItems.push(item);
           } else if (item?.category === "group") {
             // 遍历group,保留置顶微博
-            if (item?.header?.data?.icon) {
+          //  if (item?.header?.data?.icon) {
               // 置顶微博背景图
-              delete item.header.data.icon;
-            }
+           //   delete item.header.data.icon;
+           // }
             if (item?.itemId?.includes("INTEREST_PEOPLE")) {
               // 可能感兴趣的人
               continue;
@@ -441,14 +441,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                     // 最近关注与互动过的博主
                     continue;
                   }
-                  if (ii?.data?.rightImage) {
+                //  if (ii?.data?.rightImage) {
                     // 新版置顶微博皇冠
-                    delete ii.data.rightImage;
-                  }
-                  if (ii?.data?.backgroundImage) {
+                  //  delete ii.data.rightImage;
+              //    }
+              //    if (ii?.data?.backgroundImage) {
                     // 新版置顶微博背景图
-                    delete ii.data.backgroundImage;
-                  }
+               //     delete ii.data.backgroundImage;
+               //   }
                   newII.push(ii);
                 }
               }
@@ -531,17 +531,17 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 i.itemId === "100505_-_like" || // 赞/收藏
                 i.itemId === "100505_-_watchhistory" || // 浏览记录
                 i.itemId === "100505_-_draft" // 草稿箱
-                i.itemId === "100505_-_pay" || // 我的钱包
-                i.itemId === "100505_-_ordercenter" || // 我的订单
-                i.itemId === "100505_-_productcenter" || // 创作中心
-                i.itemId === "100505_-_promote" || // 广告中心
+               // i.itemId === "100505_-_pay" || // 我的钱包
+               // i.itemId === "100505_-_ordercenter" || // 我的订单
+               // i.itemId === "100505_-_productcenter" || // 创作中心
+               // i.itemId === "100505_-_promote" || // 广告中心
             );
           }
           newItems.push(item);
         } else if (itemId === "100505_-_manage") {
-          //if (item?.style) {
-           // delete item.style;
-         // }
+          if (item?.style) {
+            delete item.style;
+          }
           // 移除分隔符的点点点
           if (item?.images) {
             delete item.images;
@@ -549,9 +549,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newItems.push(item);
         } else if (itemId === "100505_-_manage2") {
           // 移除面板样式
-         // if (item?.footer) {
-         //   delete item.footer;
-         // }
+         if (item?.footer) {
+            delete item.footer;
+          }
           // 移除框内推广
           if (item?.body) {
             delete item.body;
