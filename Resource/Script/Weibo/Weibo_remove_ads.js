@@ -550,7 +550,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
           // 移除框内推广
           if (item?.body) {
-            delete item.body;
+            //delete item.body;
           }
           newItems.push(item);
         } else if (itemId === "100505_-_chaohua" || itemId === "100505_-_recentlyuser") {
