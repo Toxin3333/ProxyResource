@@ -47,7 +47,7 @@ URL-REGEX, ^http:\/\/api\.weibo\.cn\/httpdns\/config, REJECT
 
 # 开屏广告 //*.uve.weibo.com
 ^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime reject-dict
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) reject
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) reject-dict
 
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
