@@ -536,7 +536,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newItems.push(item);
         } else if (itemId === "100505_-_manage") {
           if (item?.style) {
-           // delete item.style;
+            delete item.style;
           }
           // 移除分隔符的点点点
           if (item?.images) {
@@ -546,7 +546,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else if (itemId === "100505_-_manage2") {
           // 移除面板样式
           if (item?.footer) {
-            //delete item.footer;
+            delete item.footer;
           }
           // 移除框内推广
           if (item?.body) {
@@ -554,7 +554,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
           newItems.push(item);
         } else if (itemId === "100505_-_chaohua" || itemId === "100505_-_recentlyuser") {
-          newItems.push(item);
+          //newItems.push(item);
         } else {
           // 移除其他推广
           continue;
